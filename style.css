@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+:root {
+  /*Primary colors */
+  --blue-color: hsl(223, 87%, 63%);
+  /* Secondary */
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  /* Neutral */
+  --gray-color: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  /* default-font  */
+  --default-font: 20px;
+}
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.header-box {
+  width: 100%;
+  display: inherit;
+  text-align: center;
+}
+.header-box img {
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+.header-box h2 {
+  color: var(--gray-color);
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 0.5rem;
+}
+.header-box h2 > strong {
+  color: var(--very-dark-blue);
+  font-weight: 900;
+}
+.header-box p {
+  color: var(--very-dark-blue);
+  padding-bottom: 1.8rem;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.notification-box {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.notify-input {
+  border-style: solid;
+  border-width: 1px;
+  padding: 1rem 1.8rem;
+  width: 150%;
+  color: var(--very-dark-blue);
+  font-size: var(--default-font);
+  border-radius: 30px;
+  border-color: var(--pale-blue);
+}
+.notify-input:focus {
+  outline: 0;
+  border-color: var(--pale-blue);
+}
+.input-sec {
+  position: relative;
+}
+.notification-box small {
+  position: absolute;
+  left: 16px;
+  bottom: -22px;
+  display: none;
+}
+.notification-box button {
+  background-color: var(--blue-color);
+  font-size: 18px;
+  box-shadow: 1px 3px 4px rgba(79, 125, 243, 0.4);
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 1rem 4rem;
+  margin-left: 11rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.notification-box button:hover {
+  background-color: rgb(92, 129, 221);
+  transition: all 0.2s;
+}
+.dash {
+  text-align: center;
+  margin-top: 7rem;
+}
+.dash img {
+  width: 70%;
+}
+.icons-box {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.icons-box i {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: var(--default-font);
+  color: var(--blue-color);
+  border: 0.5px solid var(--pale-blue);
+  border-radius: 20px;
+}
+.icons-box i:hover {
+  transition: 0.2s all;
+  color: #fff;
+  background-color: var(--blue-color);
+  transform: scale(1.2);
+}
+.icons-box p {
+  color: var(--gray-color);
+  letter-spacing: 0.5px;
+  padding: 1rem;
+}
+
+/* classes for validation */
+.notify-input-error {
+  border-color: red;
+  border-width: 1.5px;
+}
+.error-message {
+  color: var(--light-red);
+  font-style: italic;
+}
+* .notify-input::placeholder {
+  color: var(--pale-blue);
+}
+.notify-input-success {
+  border-color: #2fdd92;
+  border-width: 1.5px;
+}
+.success-message {
+  color: #2fdd92;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .header-box h2 {
+    font-size: 1.6rem;
+    padding: 0.8rem;
+  }
+  .header-box p {
+    padding-bottom: 0.8rem;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .notification-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .notify-input {
+    font-size: 14px;
+    width: 100%;
+    margin: 0;
+  }
+  * .notify-input::placeholder {
+    font-size: 14px;
+  }
+  .notification-box button {
+    width: 90%;
+    margin: 2rem 0px 0px;
+    font-size: 14px;
+  }
+  .input-sec {
+    width: 90%;
+  }
+  .notification-box small {
+    position: absolute;
+    left: 50px;
+    bottom: -23px;
+    font-size: 13px;
+  }
+  .dash {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .dash img {
+    width: 90%;
+  }
+  .icons-box {
+    margin-top: 6rem;
+  }
+  .icons-box p {
+    font-size: 12px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
